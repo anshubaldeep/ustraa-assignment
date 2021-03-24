@@ -1,0 +1,131 @@
+@import "~bootstrap/scss/bootstrap";
+.App {
+  text-align: center;
+}
+
+.navbar{
+  .navbar-brand{
+    padding-left: 10px;
+  }
+  .brand-icon{
+    margin-left: 10px;
+    padding-left: 14px;
+    width: 150px;
+    height: 35px;
+  }
+  .navbar-menu-icon{
+    color: #167EBD;
+    margin-bottom: 0px;
+  }
+  .navbar-icon-group{
+    width: 10em;
+    text-align: center;
+    .navbar-icon{
+      margin-left: 20px;
+      color: #167EBD;
+    }
+  }  
+}
+.main-screen{
+  padding-top: 20px;
+  text-align: left;
+  h1{
+    font-size: 1.5rem;
+  }
+  .spinner{
+    position: absolute;
+    top:50%;
+    bottom: 50%;
+    left: 50%;
+    right: 50%;
+    text-align: center;
+  }
+  .carousel-container{
+    .carousel-img{
+      padding: 10px;
+      text-align: center;
+    }
+    .react-multiple-carousel__arrow{
+      background-color: transparent;
+    }
+    .react-multiple-carousel__arrow--left{
+      left:0
+    }
+    .react-multiple-carousel__arrow--right{
+      right: 0;
+    }
+  }
+  .media-column{
+    padding-top: 40px;
+    .media-body{
+      padding-top: 40px;
+      .media-rating{
+        color: #757575;
+        font-size: 0.85rem;
+      }
+      .star-icon{
+        width: 0.95rem;
+        height: 0.95rem;
+        margin-bottom: 3px;
+      }
+    }
+    .media-image{
+      width: 150px;
+      height: 150px;
+      margin-right: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar{
+    .navbar-brand{
+      padding-left: 0px;
+    }
+    text-align: center;
+    .brand-icon{
+      margin-top: 6px;
+      padding-left: 0;
+      width: 90px;
+      height: 25px;
+    }
+  }
+  .main-screen{
+    h1{
+      font-size: 1.15rem;
+    }
+    .carousel-container{
+      .carousel-img{
+        padding: 4px;
+      }
+      .h5{
+        font-size: 0.75rem;
+      }
+    }
+    .media-column{
+      padding-top: 20px;
+      .col-2{
+        padding: 3px;
+      }
+      .media-body{
+        padding-right: 9px;
+        h5{
+          font-size: 0.95rem;
+        }
+        padding-top: 40px;
+        .media-rating{
+          color: #757575;
+          font-size: 0.65rem;
+        }
+        .star-icon{
+          width: 0.65rem;
+          height: 0.65rem;
+          margin-bottom: 3px;
+        }
+      }
+      .media-image{
+        margin-right: 4px;
+      }
+    }
+  }
+}
