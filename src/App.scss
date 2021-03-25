@@ -1,6 +1,13 @@
 @import "~bootstrap/scss/bootstrap";
+@font-face {
+  font-family: "ClearSans";
+  src: local("ClearSans"),
+    url("./Assets/Fonts/ClearSans-Bold.ttf") format("truetype");
+  font-weight: normal;
+}
 .App {
   text-align: center;
+  font-family: ClearSans;
 }
 
 .navbar {
@@ -69,7 +76,7 @@
     .media {
       background-clip: border-box;
       border: 1px solid rgba(0, 0, 0, 0.125);
-      border-bottom: 4px solid rgba(0, 0, 0, 0.125);
+      border-bottom: 2px solid rgba(0, 0, 0, 0.125);
       border-radius: 0.25rem;
       padding: 10px;
     }
@@ -153,7 +160,7 @@ footer {
       text-align: left;
     }
     .view-more{
-      margin-top: 4px;
+      margin-top: 3px;
       font-size: 0.8rem;
       text-align: center;
     }
@@ -173,7 +180,9 @@ footer {
       .btn{
         padding: 0;
         margin: 0;
+        font-size: 0.9rem;
         background-color: transparent;
+        font-weight: 100;
         border: none;
         color: #8a8a8a;
       }
