@@ -11,8 +11,8 @@ const MainScreen = () => {
   const [selectedCategoryId, setSelectedCategoryId] = useState(185);
   const [productsLoaded, setProductsLoaded] = useState(false);
   const [products, setProducts] = useState([]);
-  const [viewMorePressed,setViewMorePressed]=useState(false);
-  const [selectedCategoryName,setSelectedCategoryName]=useState('Sale');
+  const [viewMorePressed, setViewMorePressed] = useState(false);
+  const [selectedCategoryName, setSelectedCategoryName] = useState("Sale");
 
   useEffect(() => {
     Axios.get("homemenucategories/v1.0.1?device_type=mob")
@@ -32,40 +32,55 @@ const MainScreen = () => {
         console.log(error);
       });
   }, []);
-  useEffect(()=>{
-    Axios.get("catalog/v1.0.1?category_id="+selectedCategoryId)
-    .then(function (response){
-      setProducts(response.data.products);
-      setProductsLoaded(true);
-    })
-    .catch(function (error){
-      console.log(error);
-    })
-  },[selectedCategoryId])
-  const onSelectCategory=(id)=>{
+  useEffect(() => {
+    Axios.get("catalog/v1.0.1?category_id=" + selectedCategoryId)
+      .then(function (response) {
+        setProducts(response.data.products);
+        setProductsLoaded(true);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }, [selectedCategoryId]);
+  const onSelectCategory = (id) => {
     setSelectedCategoryId(id);
-    setSelectedCategoryName(categories.filter(cat=>cat.category_id===id)[0].category_name)
+    setSelectedCategoryName(
+      categories.filter((cat) => cat.category_id === id)[0].category_name
+    );
     setProductsLoaded(false);
     setViewMorePressed(false);
-  }
-  const onViewMorePress=()=>{
-    const viewMoreVar=viewMorePressed;
+  };
+  const onViewMorePress = () => {
+    const viewMoreVar = viewMorePressed;
     setViewMorePressed(!viewMoreVar);
-  }
-  let ViewableArea = (
+  };
+  const SpinnerComponent = (
     <div className="spinner">
       <Spinner animation="border" role="status">
         <span className="sr-only">Loading...</span>
       </Spinner>
     </div>
   );
-  if (loadCategories && productsLoaded) {
+  let ViewableArea = SpinnerComponent;
+  if (loadCategories) {
     ViewableArea = (
       <>
         <h1>Our Products</h1>
-        <PillsRow categories={categories} selectCategory={onSelectCategory}/>
-        <MediaCol products={products} viewMore={viewMorePressed}/>
-        <FootToolbar viewMorePress={onViewMorePress} viewMoreVal={viewMorePressed} changeCategory={onSelectCategory} currentCategory={selectedCategoryName} categories={categories}/>
+        <PillsRow categories={categories} selectCategory={onSelectCategory} />
+        {productsLoaded ? (
+          <>
+            <MediaCol products={products} viewMore={viewMorePressed} />
+            <FootToolbar
+              viewMorePress={onViewMorePress}
+              viewMoreVal={viewMorePressed}
+              changeCategory={onSelectCategory}
+              currentCategory={selectedCategoryName}
+              categories={categories}
+            />
+          </>
+        ) : (
+          SpinnerComponent
+        )}
       </>
     );
   }

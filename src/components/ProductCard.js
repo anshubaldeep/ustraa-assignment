@@ -8,10 +8,14 @@ const ProductCard = (props) => {
       <Card.Body>
         <Card.Title>{props.name}</Card.Title>
         <Card.Text>
-        ₹ {props.final_price} <strike>{props.price}</strike>
+          ₹ {props.final_price} <strike>{props.price}</strike>
         </Card.Text>
 
-        {props.is_in_stock?<Button variant="success">Add to Cart</Button>:<Button variant="secondary">Out of Stock</Button>}
+        {props.is_in_stock ? (
+          <Button variant="success">Add to Cart</Button>
+        ) : (
+          <Button variant="secondary">Out of Stock</Button>
+        )}
       </Card.Body>
     </Card>
   );

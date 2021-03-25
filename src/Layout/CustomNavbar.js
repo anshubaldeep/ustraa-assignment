@@ -8,7 +8,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 
 const CustomNavbar = () => {
   return (
-    <Navbar bg="light" variant="light">
+    <Navbar bg="light" variant="light" sticky="top">
     <Container>
     <div>
     <MenuIcon className='navbar-menu-icon'/>
