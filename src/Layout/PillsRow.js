@@ -42,7 +42,7 @@ const PillsRow = (props) => {
         return (
           <div key={cat.category_id}>
             <div className="carousel-img">
-              <Card className="bg-dark text-white">
+              <Card className="bg-dark text-white category-card" onClick={()=>props.selectCategory(cat.category_id)}>
                 <Card.Img src={cat.category_image} alt={cat.category_name} />
                 <Card.ImgOverlay>
                   <Card.Title>{cat.category_name.toUpperCase()}</Card.Title>

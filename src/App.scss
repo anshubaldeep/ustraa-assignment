@@ -3,129 +3,263 @@
   text-align: center;
 }
 
-.navbar{
-  .navbar-brand{
+.navbar {
+  .navbar-brand {
     padding-left: 10px;
   }
-  .brand-icon{
+  .brand-icon {
     margin-left: 10px;
     padding-left: 14px;
     width: 150px;
     height: 35px;
   }
-  .navbar-menu-icon{
-    color: #167EBD;
+  .navbar-menu-icon {
+    color: #167ebd;
     margin-bottom: 0px;
   }
-  .navbar-icon-group{
+  .navbar-icon-group {
     width: 10em;
     text-align: center;
-    .navbar-icon{
+    .navbar-icon {
       margin-left: 20px;
-      color: #167EBD;
+      color: #167ebd;
     }
-  }  
+  }
 }
-.main-screen{
+.main-screen {
   padding-top: 20px;
   text-align: left;
-  h1{
+  h1 {
     font-size: 1.5rem;
   }
-  .spinner{
+  .spinner {
     position: absolute;
-    top:50%;
+    top: 50%;
     bottom: 50%;
     left: 50%;
     right: 50%;
     text-align: center;
   }
-  .carousel-container{
-    .carousel-img{
+  .carousel-container {
+    .carousel-img {
       padding: 10px;
       text-align: center;
     }
-    .react-multiple-carousel__arrow{
+    .h5{
+      font-size: 1.25rem;
+    }
+    .category-card{
+      .card-img-overlay{
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
+    .react-multiple-carousel__arrow {
       background-color: transparent;
     }
-    .react-multiple-carousel__arrow--left{
-      left:0
+    .react-multiple-carousel__arrow--left {
+      left: 0;
     }
-    .react-multiple-carousel__arrow--right{
+    .react-multiple-carousel__arrow--right {
       right: 0;
     }
   }
-  .media-column{
-    padding-top: 40px;
-    .media-body{
-      padding-top: 40px;
-      .media-rating{
+  .media-column {
+    padding-top: 15px;
+    .media {
+      background-clip: border-box;
+      border: 1px solid rgba(0, 0, 0, 0.125);
+      border-bottom: 4px solid rgba(0, 0, 0, 0.125);
+      border-radius: 0.25rem;
+      padding: 10px;
+    }
+    .media-body {
+      padding-top: 15px;
+      .media-rating {
         color: #757575;
         font-size: 0.85rem;
       }
-      .star-icon{
+      .media-weight {
+        color: #757575;
+        font-size: 0.65rem;
+      }
+      .star-icon {
         width: 0.95rem;
         height: 0.95rem;
         margin-bottom: 3px;
       }
     }
-    .media-image{
-      width: 150px;
-      height: 150px;
-      margin-right: 20px;
+    .media-image {
+      width: 110px;
+      height: 110px;
+      margin-right: 25px;
     }
+  }
+  .product-carousel {
+    .product-card {
+      height: 450px;
+      border: none;
+      .h5 {
+        font-size: 1rem;
+      }
+      img {
+        width: 250px;
+        height: 250px;
+      }
+      .card-body {
+        padding-top: 30px;
+        padding-left: 0px;
+        padding-right: 0px;
+        background-color: transparent;
+        height: 200px;
+        width: 270px;
+      }
+    }
+    .react-multiple-carousel__arrow {
+      background-color: black;
+    }
+    .react-multiple-carousel__arrow--left {
+      left: 0;
+    }
+    .react-multiple-carousel__arrow--right {
+      right: 0;
+    }
+  }
+}
+footer {
+  display: none;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: transparent;
+  color: #8a8a8a;
+  text-align: center;
+  .Footer {
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    .card-title {
+      background-color: transparent;
+    }
+    .current-category {
+      font-weight: bold;
+      font-size: 0.95rem;
+    }
+    .toolbar-col {
+      padding-top: 9px;
+      padding-bottom: 9px;
+      padding-left: 1px;
+      padding-right: 1px;
+      border: 3px solid #ebe9e9;
+      text-align: left;
+    }
+    .view-more{
+      margin-top: 4px;
+      font-size: 0.8rem;
+      text-align: center;
+    }
+    .nested-row{
+      font-size: 0.65rem;
+      padding: 2px;
+    }
+    .nested-col-1{
+      padding-left: 18px;
+      padding-right: 1px;
+      font-size: 0.65rem;
+    }
+    .nested-col-2{
+      padding-right: 0px;
+      padding-left: 5px;
+      margin-top: -2.5px;
+      .btn{
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+        border: none;
+        color: #8a8a8a;
+      }
+      .btn:focus{
+        font-weight: bold;
+        background-color: transparent;
+        box-shadow: none;
+      }
+    }
+  }
+  .h5 {
+    font-size: 0.95rem;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .navbar{
-    .navbar-brand{
+  .navbar {
+    .navbar-brand {
       padding-left: 0px;
     }
     text-align: center;
-    .brand-icon{
+    .brand-icon {
       margin-top: 6px;
       padding-left: 0;
       width: 90px;
       height: 25px;
     }
   }
-  .main-screen{
-    h1{
+  .main-screen {
+    h1 {
       font-size: 1.15rem;
     }
-    .carousel-container{
-      .carousel-img{
+    .carousel-container {
+      .carousel-img {
         padding: 4px;
       }
-      .h5{
-        font-size: 0.75rem;
+      .h5 {
+        font-size: 0.85rem;
       }
     }
-    .media-column{
-      padding-top: 20px;
-      .col-2{
+    .media-column {
+      padding-top: 15px;
+      .col-2 {
         padding: 3px;
       }
-      .media-body{
+      .media-body {
         padding-right: 9px;
-        h5{
-          font-size: 0.95rem;
+        padding-top: 5px;
+        h5 {
+          font-size: 0.9rem;
+          margin-bottom: 4px;
         }
-        padding-top: 40px;
-        .media-rating{
+        .btn {
+          margin-top: 6px;
+          width: 9em;
+          height: 3em;
+          font-size: 0.65rem;
+          border-radius: 0;
+          background-color: #40d661;
+          border: none;
+        }
+        .media-rating {
           color: #757575;
           font-size: 0.65rem;
         }
-        .star-icon{
+        .media-final-price {
+          font-size: 0.85rem;
+          font-weight: bold;
+        }
+        .media-price {
+          font-size: 0.65rem;
+          color: #757575;
+          font-weight: normal;
+        }
+        .star-icon {
           width: 0.65rem;
           height: 0.65rem;
           margin-bottom: 3px;
         }
       }
-      .media-image{
+      .media-image {
         margin-right: 4px;
       }
     }
+  }
+  footer {
+    display: block;
   }
 }
