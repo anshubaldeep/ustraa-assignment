@@ -20,5 +20,5 @@ You will also see any lint errors in the console.
 
 The application is built mainly for the mobile view, although there is a different view coded for dektop view as well.
 
-In case of any queries feel free to contact me : [anshubaldeep@gmail.com](mailto:anshubaldeep@gmail.com)
+In case of any queries feel free to contact me : [anshubaldeep@gmail.com](mailto:anshubaldeep@gmail.com) \
 Built by Baldeep Singh - 2021
