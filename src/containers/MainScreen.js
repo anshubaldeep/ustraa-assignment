@@ -66,7 +66,7 @@ const MainScreen = () => {
     ViewableArea = (
       <>
         <h1>Our Products</h1>
-        <PillsRow categories={categories} selectCategory={onSelectCategory} />
+        <PillsRow categories={categories} selectCategory={onSelectCategory} selectedCategoryId={selectedCategoryId}/>
         {productsLoaded ? (
           <>
             <MediaCol products={products} viewMore={viewMorePressed} />
